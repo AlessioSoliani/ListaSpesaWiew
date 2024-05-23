@@ -12,8 +12,8 @@ let tab = ref(1);
       <h1>My Shopping List</h1>     
        <!-- tabs -->
         <div class="my-4">
-          <button :class="{'btn-neutral' : tab===1}" class="  ml-1.5 rounded-lg btn btn-xs sm:btn-sm md:btn-md" @click="tab=1">Home</button>
-          <button :class="{'btn-neutral' : tab===2}" class="  ms-1.5 rounded-lg btn btn-xs sm:btn-sm md:btn-md" @click="tab=2">Products To Buy</button>
+          <button :class="{'btn-neutral' : tab===1}" class="  ml-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=1">Home</button>
+          <button :class="{'btn-neutral' : tab===2}" class="  ms-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=2">Products To Buy</button>
         </div>
     </div>
     <!-- contenuto -->

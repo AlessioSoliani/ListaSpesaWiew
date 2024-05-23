@@ -1,9 +1,13 @@
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import axios from 'axios';
 
+
 let products = ref( [] );
+
+let completedProducts = computed(() => products.value.filter(p => p.completed).length);
+let toDoProducts = computed(() => products.value.filter(p => !p.completed).length);
 
 onMounted(()=>{
   axios.get('http://localhost:3000/products').then((res)=>{
@@ -50,7 +54,18 @@ axios.delete(`http://localhost:3000/products/${productId}`).then((res) =>{
       </label>
    </div>
 
-
+<!-- completati e da fare -->
+          <div class="w-full md:w-2/5 mx-auto my-4">
+            <div class="flex justify-around">
+              <button class="btn btn-active btn-neutral">
+                <div class="badge">{{ completedProducts }}</div> products taken
+              </button>
+              <button class="btn btn-active btn-neutral">
+                <div class="badge">{{ toDoProducts }}</div>products to take
+              </button>
+          
+            </div>
+          </div>
 
     <!-- lista prodotti -->
   <div class="w-full md:w-2/5 mx-auto border border-neutral rounded-lg">

@@ -1,3 +1,24 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "0079",
+      "name": "arance",
+      "completed": true
+    },
+    {
+      "id": "5719",
+      "name": "cachi",
+      "completed": true
+    },
+    {
+      "id": "95d8",
+      "name": "formaggio",
+      "completed": true
+    },
+    {
+      "id": "b5d7",
+      "name": "limoni",
+      "completed": false
+    }
+  ]
 }
