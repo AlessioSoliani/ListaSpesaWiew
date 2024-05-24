@@ -1,4 +1,3 @@
-
 <script setup>
 import { computed, onMounted, ref } from "vue";
 import axios from 'axios';
@@ -9,6 +8,12 @@ let products = ref( [] );
 let completedProducts = computed(() => products.value.filter(p => p.completed).length);
 let toDoProducts = computed(() => products.value.filter(p => !p.completed).length);
 
+
+
+
+let inputProduct =ref('');
+
+
 onMounted(()=>{
   axios.get('http://localhost:3000/products').then((res)=>{
     products.value = res.data;
@@ -18,13 +23,17 @@ onMounted(()=>{
 
 function onAddProduct(event) {
   let nameProduct = event.target.value;
+  if(nameProduct.trim()==='')return;
   let newProduct = {
     name: nameProduct,
-    completed: false
+    completed: false,
+    
+    
   }
 
   axios.post('http://localhost:3000/products', newProduct).then((res) => {
     products.value = [...products.value, res.data];
+    inputProduct.value =''; 
     console.log(res.data);
   })
 
@@ -49,7 +58,7 @@ axios.delete(`http://localhost:3000/products/${productId}`).then((res) =>{
    <!--sezione per aggiungere un nuovo prodotto  -->
    <div class="w-full md:w-2/5 mx-auto my-4">
       <label class="input rounded-lg input-bordered flex items-center gap-2">
-        <input type="text" @keyup.enter="onAddProduct($event)" class="grow" placeholder="ad new product"/>
+        <input type="text" v-model="inputProduct" @keyup.enter="onAddProduct($event)" class="grow" placeholder="ad new product"/>
         <kbd class="kbd kbd-sm bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 text-white rounded-md shadow-md  m-1">Enter</kbd>
       </label>
    </div>
