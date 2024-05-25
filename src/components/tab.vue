@@ -8,12 +8,13 @@ let tab = ref(1);
 
 <template>
   <div class="tabs">
-    <div class="flex justify-around text-2xl  my-4" style="margin-left: 18%; margin-right: 18%;">
-      <h1>My Shopping List</h1>     
+    <h1 class="text-center">My Shopping List</h1>
+    <div class="flex justify-around text-2xl  my-4">
+           
        <!-- tabs -->
         <div class="my-4">
-          <button :class="{'btn-neutral' : tab===1}" class="  ml-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=1">Home</button>
-          <button :class="{'btn-neutral' : tab===2}" class="  ms-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=2">Products To Buy</button>
+          <button :class="{'btn-neutral' : tab===1}" class="  btnPhone ml-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=1">Home</button>
+          <button :class="{'btn-neutral' : tab===2}" class=" btnPhone ms-1.5 rounded btn btn-xs sm:btn-sm md:btn-md" @click="tab=2">Products To Buy</button>
         </div>
     </div>
     <!-- contenuto -->

@@ -72,7 +72,10 @@ h1{
       }
       .card-body p {
         white-space: normal; /* Ensure text wraps within the container */
-      }        
+      }
+      .btnPhone{        
+        height: 40px;
+    }        
   }
   
   
@@ -109,4 +112,10 @@ h1{
     .card-body p {
       white-space: normal; /* Ensure text wraps within the container */
     }
+
+     .btnPhone{        
+        height: 40px;
+    } 
   }
+
+ 

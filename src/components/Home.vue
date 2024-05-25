@@ -14,16 +14,18 @@ function goToProductToBuy() {
   <div class="card lg:card-side h-96 bg-base-100 shadow-xl">
      <div class="responsiveImg"  alt="Album"></div>
          <div class=" flex align-center  card-body w-48">
-              <h2 class="card-title"> gestisci la tua spesa </h2>
-              <p>Shopping List, il tuo strumento essenziale per creare e organizzare le tue liste della spesa in modo intuitivo e veloce, garantendoti un'esperienza di shopping senza stress e ben organizzata!</p>
+              <h2 class="card-title"> Manage your spending </h2>
+              <p>Shopping List, your essential tool for creating and organizing your shopping lists intuitively and quickly, ensuring a stress-free and well-organized shopping experience!</p>
               
          </div>        
    </div>
 </div>
 <div class="justPhones">
-<h1> Gestisci la tua spesa </h1>
-<p>Shopping List, il tuo strumento essenziale per creare e organizzare le tue liste della spesa in modo intuitivo e veloce, garantendoti un'esperienza di shopping senza stress e ben organizzata!</p>
+<h1> Manage your spending </h1>
+<p>Shopping List, your essential tool for creating and organizing your shopping lists intuitively and quickly, ensuring a stress-free and well-organized shopping experience!</p>
 </div>
+
+
 </template>
 
 

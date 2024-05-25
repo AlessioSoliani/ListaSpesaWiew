@@ -22,14 +22,15 @@ onMounted(()=>{
 
 
 function onAddProduct(event) {
+  // console.log(event.target.value);
   let nameProduct = event.target.value;
   if(nameProduct.trim()==='')return;
   let newProduct = {
     name: nameProduct,
     completed: false,
     
-    
-  }
+  }   
+  
 
   axios.post('http://localhost:3000/products', newProduct).then((res) => {
     products.value = [...products.value, res.data];
